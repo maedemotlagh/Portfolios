@@ -267,4 +267,123 @@
         }
     }
 }
+.mobileApp{
+    padding: 0 105px;
+    margin-top: 120px;
+
+    h3{
+        width: 550px;
+        font-size: 35px;
+        margin-bottom: 45px;
+        line-height: 40px;
+
+
+        span{
+            color: #999999;
+            word-spacing: 3px;
+            margin-left: 10px;
+        }
+    }
+
+    .mobileApp-mainSection{
+        display: flex;
+        direction: rtl;
+        align-items: center;
+        justify-content: space-between;
+
+        .mobileApp-mainSection-pic{
+            img{
+                width: 300px;
+            }
+        }
+        .mobileApp-mainSection-text{
+            width: 338px;
+            direction: ltr;
+
+            h4{
+                font-size: 30px;
+            }
+
+            p{
+                color: #797979;
+                font-size: 20px;
+                line-height: 25px;
+            }
+
+            a{
+                display: flex;
+                align-items: center;
+                color: blueviolet;
+                font-size: 20px;
+                word-spacing: 4px;
+                margin: 40px 0;
+
+                span{
+                    margin-left: 8px;
+
+                    img{
+                        width: 15px;
+                    }
+                }
+            }
+
+            ul{
+                list-style-type: none;
+                padding-left: 0;
+                font-size: 18px;
+
+                li{
+                    margin-bottom: 15px;
+                    color: #6f6f6f;
+                    span{
+                        margin-right: 4px;
+
+                        img{
+                            width: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.mobileApp-descInfo{
+    margin-top: 40px;
+    .mobileApp-descInfo-desciription{
+
+        P{
+            width: 410px;
+            font-size: 22px;
+        }
+
+        .mobileApp-descInfo-desciription-parent{
+            display: flex;
+            justify-content: space-between;
+
+            .mobileApp-descInfo-desciription-profile-img{
+                margin-right: -70px;
+                 .img1{
+                    margin-right: 65px;
+                 }
+            }
+            .mobileApp-descInfo-desciription-profile{
+                display: flex;
+                align-items: center;
+                
+                & > p{
+                    font-size: 19px;
+
+                    span{
+                        color: #9a9a9a;
+                    }
+                }
+                img{
+                    margin-right: 10px;
+                    width: 45px;
+                }
+            }
+        }
+    }    
+}
+
 

@@ -190,6 +190,40 @@ const Test = () => {
                         <button className="sliderPostInfo-btn">Request a Demo</button>
                     </div>
                 </div>
+                <div className="mobileApp">
+                    <h3>Boost your business<span>with tools to deliver the best physical and digital member experience</span></h3>
+                    <div className="mobileApp-mainSection">
+                        <div className="mobileApp-mainSection-pic">
+                            <img src="/img/mobile app.png"/>
+                        </div>
+                        <div className="mobileApp-mainSection-text">
+                            <h4>Brand & marketing tools</h4>
+                            <p>Amplify your brand, engage with your customer base and generate more revenue with our selection of effective and easy-to-use brand and marketing tools.</p>
+                            <a>Explore Marketing Tools</a>
+                            <ul>
+                                <li><span><img src="/img/success.svg"/></span>Lead capture & social integrations</li>
+                                <li><span><img src="/img/success.svg"/></span>Automated messaging & push notifications</li>
+                                <li><span><img src="/img/success.svg"/></span>Custom mobile member experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="mobileApp-descInfo">
+                            <div className="mobileApp-descInfo-desciription">
+                                <p>“Having the branded app is a huge benefit. It’s really user-friendly for both members and staff, delivering an easy, smooth experience for us all.”</p>
+                                <div className="mobileApp-descInfo-desciription-parent">
+                                    <div className="mobileApp-descInfo-desciription-profile">
+                                      <img src="/img/profile.jpg" />
+                                      <p>Hannah Bratcher — <span>Co-founder at Studio Fire</span></p>
+                                    </div>
+                                    <div className="mobileApp-descInfo-desciription-profile-img">
+                                      <img className="img1" src="/img/infomobile.svg" />
+                                      <img className="img2" src="/img/infomobile1.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                </div>
           </div>
         </div>
     )
