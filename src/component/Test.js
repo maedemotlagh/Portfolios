@@ -9,14 +9,11 @@ const initialState = {
 ///reducer
 
 const rootreducer = (state= initialState , action)=>{
-switch(action.type){
-    case 'INCREMENT':
-        return state + 1;
-    case 'DECREMENT' : 
-        return state -1;
-    default:
-        return state        
-}
+ if(action.type === 'INCREMENT'){
+     return state + 2
+ }else{
+     return state
+ }    
 }
 
 /// store
@@ -24,12 +21,14 @@ switch(action.type){
 const Store = createStore(rootreducer) 
 console.log('state' , Store.getState())
 
-///dispatch action 
-Store.dispatch({type : 'INCREMENT'})
 ///subscribtion
 Store.subscribe(()=>{
     console.log(Store.getState() , 'state')
 })
+
+///dispatch action 
+Store.dispatch({type : 'INCREMENT'})
+
 const MenuItem = [
     {
         name:'Resources',

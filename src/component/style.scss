@@ -96,6 +96,12 @@
         display: block;
     }
 }
+.Logo{
+@media (max-width:470px) {
+    display: none;
+}
+}
+
 .NameMenu:hover + .subMenuItem{
     opacity: 1;
     top: 75px;
@@ -115,6 +121,10 @@
         width: auto;
         img{
             width: 515px;
+
+            @media (max-width:520px) {
+                width: 100%;
+            }
         }
     }
     .LeftSection{
@@ -151,6 +161,11 @@
                 justify-content: center;
             }
 
+            @media (max-width:440px) {
+                flex-direction: column ; 
+                align-items: center;
+            }
+
             .EmailBtn{
                 width: 130px;
                 margin-right: 20px;
@@ -173,6 +188,11 @@
                 color: white;
                 cursor: pointer;
                 transition: all .25s ease;
+
+                @media (max-width:440px) {
+                    margin-top:20px;
+                    margin-left: 20px;
+                }
 
                 &:hover{
                     opacity: .7;
@@ -222,6 +242,10 @@
                 margin-right: 10px;
                  img{
                      width: 75px;
+
+                     @media (max-width:448px) {
+                         width: 60px;
+                     }
                  }
             }
         }
@@ -284,17 +308,41 @@
                 grid-template-columns: repeat(2 , 2fr);
             }
 
+            @media (max-width:732px) {
+                grid-column-gap:40px ;
+            }
+
+            @media (max-width:734px) {
+                grid-template-columns: repeat(1 , 1fr);
+            }
+
         .BlogPost-content{
             width: fit-content;
             display: flex;
             flex-direction: column;
             align-items: center;
 
+            @media (max-width:900px) {
+                width: 320px;
+
+                img{
+                    width: inherit;
+                }
+            }
+
+            @media (max-width:370px) {
+                width: 285px;
+            }
+
             & > p{
                 width: 350px;
                 font-size: 18px;
                 color: #8e8e8e;
                 line-height: 30px;
+
+                @media (max-width:900px) {
+                    width: inherit;
+                }
             }
 
             & > h3{
@@ -354,6 +402,18 @@
         @media (max-width:992px) {
             margin-bottom: 30px;
         }
+
+        @media (max-width:696px) {
+            width: 100%;
+        }
+
+        @media (max-width:448px) {
+            display: grid;
+            grid-template-columns: repeat(3 ,2fr);
+            justify-items: center;
+            grid-row-gap: 25px;
+            grid-column-gap: 10px;
+        }
     }
     .sliderPostInfo-btn{
         width: 190px;
@@ -383,6 +443,9 @@
         margin-bottom: 45px;
         line-height: 40px;
 
+        @media (max-width:710px) {
+            width: 100%;
+        }
 
         span{
             color: #999999;
@@ -396,6 +459,10 @@
         direction: rtl;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width:925px) {
+            flex-direction: column;
+        }
 
         .mobileApp-mainSection-pic{
             img{
@@ -460,12 +527,19 @@
         P{
             width: 410px;
             font-size: 22px;
+
+            @media (max-width:560px) {
+                width: 100%;
+            }
         }
 
         .mobileApp-descInfo-desciription-parent{
             display: flex;
             justify-content: space-between;
 
+            @media (max-width:850px) {
+                flex-direction: column !important;
+            }
             .mobileApp-descInfo-desciription-profile-img{
                 margin-right: -70px;
                  .img1{
@@ -499,8 +573,24 @@
     align-items: center;
     padding: 40px 100px;
     margin-top: 50px;
+
+    @media (max-width:1190px) {
+        padding: 40px 50px;
+    }
+
+    @media (max-width:992px) {
+        flex-direction: column-reverse;
+    }
     .DescribeForm{
         width: 400px;
+
+        @media (max-width:992px) {
+            text-align: center;
+        }
+
+        @media (max-width:468px) {
+            width: 100%;
+        }
 
         h2{
             font-size: 35px;
@@ -518,6 +608,10 @@
                 color:#e9e9e9;
                 margin-bottom: 40px;
                 font-size: 20px;
+
+                @media (max-width:1190px) {
+                    font-size: 17px;
+                }
             }
         }
     }
@@ -531,6 +625,18 @@
         justify-content: center;
         align-items: center;
         background-color: #dadad8;
+
+        @media (max-width:1190px) {
+            width: 450px;
+        }
+
+        @media (max-width:500px) {
+            width: 100%;
+        }
+
+        @media (max-width:468px) {
+            width:355px;
+        }
 
         h4{
             font-size: 30px;
@@ -575,6 +681,16 @@
         display: grid;
         grid-template-columns: repeat(4 ,1fr);
         justify-items: center;
+        padding: 0 90px;
+
+        @media (max-width:880px) {
+            grid-template-columns: repeat(2 , 2fr);
+        }
+
+        @media (max-width:542px) {
+            grid-template-columns: repeat(1 , 4fr);
+            justify-items: baseline;
+        }
 
         .col{
             display: flex;
@@ -617,6 +733,10 @@
         padding: 20px 10px;
         margin-top: 40px;
 
+        @media (max-width:542px) {
+            flex-direction: column-reverse;
+        }
+
         .socialmedia{
             display: flex;
             justify-content: space-between;
@@ -634,6 +754,11 @@
         }
 
         .copyRight{
+
+            @media (max-width:542px) {
+                margin-bottom: 15px;
+            }
+            
             span{
                 color: #6e6e6e;
             }
