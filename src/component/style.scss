@@ -473,6 +473,10 @@
             width: 338px;
             direction: ltr;
 
+            @media (max-width:370px) {
+                width: 100%;
+            }
+
             h4{
                 font-size: 30px;
             }
@@ -544,6 +548,16 @@
                 margin-right: -70px;
                  .img1{
                     margin-right: 65px;
+
+                    @media (max-width:350px) {
+                        width:130px ;
+                    }
+                 }
+
+                 .img2{
+                     @media (max-width:350px) {
+                         width: 130px;
+                     }
                  }
             }
             .mobileApp-descInfo-desciription-profile{
@@ -638,6 +652,10 @@
             width:355px;
         }
 
+        @media (max-width:380px) {
+            width: 100%;
+        }
+
         h4{
             font-size: 30px;
         }
@@ -646,6 +664,9 @@
             display: flex;
             flex-direction: column;
 
+            @media (max-width:380px) {
+                width: 100%;
+            }
             input{
                 padding: 15px 10px;
                 border-radius: 5px;
@@ -653,10 +674,22 @@
                 margin-top: 10px;
                 margin-bottom: 20px;
                 width: 300px;
+
+                @media (max-width:380px) {
+                    width: 80%;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
             }
 
             label{
                 font-weight: bold;
+
+                @media (max-width:380px) {
+                    width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
 
             button{
@@ -666,6 +699,11 @@
                 border-radius: 5px;
                 cursor: pointer;
                 transition: all .5s ease-in-out;
+
+                @media (max-width:380px) {
+                    width: 80%;
+                    margin: auto;
+                }
 
                 &:hover{
                     opacity: .8;
