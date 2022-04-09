@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './style.scss'
 
 
@@ -36,8 +36,41 @@ const PostItem =  [
 
 ]
 
+const FAQ = [
+    {
+        question:'Donce posuere massa nec scelerisque,blandit mattis justo blandit',
+        answer:'Suspendisse sem neque, auctor a elementum ut,',
+        id:0
+    },
+    {
+        question:'Quisque at justo semper , faucibus eros sit amet , scelerisque lorem',
+        answer:'Suspendisse sem neque, auctor a elementum ut,',
+        id:1
+    },
+    {
+        question:'Nulla eget justo at erso varius consequat',
+        answer:'Suspendisse sem neque, auctor a elementum ut,',
+        id:2
+    },
+    {
+        question:'vivamus nan nibh quis massa laoreet semper et eu quam',
+        answer:'Suspendisse sem neque, auctor a elementum ut,',
+        id:3
+    },
+    {
+        question:'Morbi quis nisi tempus,mollid turpis ut,mollis massa',
+        answer:'Suspendisse sem neque, auctor a elementum ut,',
+        id:4
+    }
+]
+
 /////please run in googlechorom or firefox
 const TestComponent = () => {
+
+    const[openA , setOpenA] = useState(0)
+
+    
+
     return(
         <div>
             <div className="navbar">
@@ -117,13 +150,83 @@ const TestComponent = () => {
                 {
                   PostItem.map((content , index)=>
                   <div className="Item">
-                      <div>
+                      <div className="ItemImage">
                           <img src={content.img} />
+                      </div>
+                      <div className="ItemInfo">
+                        <div className="ItemInfoName">
+                            <p>{content.desc}</p>
+                            <p>{content.code}</p>
+                        </div>
+                        <div className="ItemInfoIcon">
+                            <LockIcon/>
+                            <VisitIcon/>
+                        </div>
                       </div>
                   </div>
                   )
                 }
                 </div>
+            </div>
+            <div className="FAQ">
+                <h3>FAQ</h3>
+                <div className="faqBox">
+                            {
+                                FAQ.map((item , i) => 
+                                
+                                <div>
+                                    {console.log(i ,'jjjjjj')}
+                                 <div className="QandAItem">   
+                                    <p className="QItem">{item.question}</p>
+                                    <p className={`AItem ${openA  ? 'open' :''}`}>{item.answer}</p>
+                                 </div>
+                                 <div className="IconFAQ" onClick={()=>setOpenA(!openA)}>
+                                    <AngleBottom/>
+                                 </div>
+                                </div>                                
+                                )
+                            }
+                </div>
+            </div>
+            <div className="Footer">
+                <div className="TopFooter">
+                <div className="LogoSocial">
+                    <p>Logo</p>
+                    <div className="Logo">
+                        <p>join the community</p>
+                        <div className="Socials">
+                            <Instagram/>
+                            <Twitter/>
+                            <Telegram/>
+                        </div>    
+                    </div>
+                </div>
+                <div className="About">
+                    <p>Site</p>
+                    <div>
+                        <a>About us</a>
+                        <a>NFTs</a>
+                        <a>Contact</a>
+                    </div>    
+                </div>                            
+                <div className="Utility">
+                    <p>Utility</p>
+                    <div>
+                        <a>Style guide</a>
+                        <a>Licensing</a>
+                        <a>404</a>
+                    </div>    
+                </div>                            
+                <div className="shop">
+                    <p className="shopTitle">stay in the loop</p>
+                    <p className="shopText"> Suspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna at</p>
+                    <div className="shopForm">
+                        <input placeholder="your email"/>
+                        <button>sign up</button>
+                    </div>
+                </div>
+                </div>
+                <p className="LicenceText">2022 All rights reserved.</p>                            
             </div>
         </div>
     )
@@ -134,5 +237,10 @@ const Instagram = () => <svg width="48" height="48" viewBox="0 0 48 48" fill="no
 const Telegram = () => <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24ZM19.6 35L20.0083 28.8823L20.008 28.882L31.1369 18.839C31.6253 18.4055 31.0303 18.1941 30.3819 18.5873L16.6473 27.2523L10.7147 25.4007C9.4335 25.0084 9.4243 24.128 11.0023 23.4951L34.1203 14.5809C35.1762 14.1015 36.1953 14.8345 35.7922 16.4505L31.8552 35.0031C31.5803 36.3215 30.7837 36.6368 29.68 36.0278L23.6827 31.5969L20.8 34.4C20.7909 34.4088 20.7819 34.4176 20.7729 34.4264C20.4505 34.7403 20.1837 35 19.6 35Z" fill="black"/></svg>
 const Twitter = () => <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM23.3316 20.338L23.2812 19.5075C23.1301 17.3551 24.4563 15.3891 26.5548 14.6265C27.327 14.3553 28.6364 14.3214 29.4926 14.5587C29.8283 14.6604 30.4663 14.9993 30.9195 15.3044L31.7421 15.8637L32.6486 15.5756C33.1523 15.423 33.8238 15.1688 34.1259 14.9993C34.4113 14.8468 34.6631 14.762 34.6631 14.8129C34.6631 15.101 34.042 16.084 33.5216 16.6263C32.8165 17.389 33.018 17.4568 34.4449 16.9483C35.3011 16.6602 35.3178 16.6602 35.15 16.9822C35.0492 17.1517 34.5288 17.7449 33.9748 18.2872C33.0347 19.2194 32.9844 19.3211 32.9844 20.1007C32.9844 21.304 32.4136 23.8123 31.8428 25.1851C30.7852 27.7612 28.5189 30.422 26.2526 31.7609C23.063 33.6422 18.8157 34.1167 15.24 33.0151C14.0481 32.6422 12 31.6931 12 31.5237C12 31.4728 12.6211 31.405 13.3766 31.3881C14.9546 31.3542 16.5326 30.9135 17.8756 30.1339L18.7822 29.5916L17.7413 29.2357C16.264 28.7272 14.9378 27.5578 14.6021 26.4562C14.5013 26.1003 14.5349 26.0833 15.475 26.0833L16.4487 26.0664L15.6261 25.6766C14.6524 25.1851 13.7627 24.3546 13.3262 23.5072C13.0072 22.8971 12.6044 21.3548 12.7219 21.2362C12.7554 21.1854 13.108 21.287 13.5109 21.4226C14.6692 21.8463 14.8203 21.7446 14.1488 21.0328C12.8897 19.7448 12.5036 17.8296 13.108 16.0162L13.3934 15.2027L14.5013 16.3043C16.7677 18.5245 19.4369 19.8465 22.4922 20.2363L23.3316 20.338Z" fill="black"/></svg>
 const Avatar = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>among us 2</title><g id="among_us_2" data-name="among us 2"><path d="M11.27,31A2.11,2.11,0,0,1,8.9,29.08c-.16-4-.42-16.18.58-24.55a4,4,0,0,1,4-3.53h4.93a8,8,0,0,1,8,7.73c.16,5.88.08,13.89-.25,19.4a2,2,0,0,1-2,1.87H22.27A2.07,2.07,0,0,1,20,28V24H16v4a3,3,0,0,1-3,3Z" fill="#24a9bf"/><path d="M9.13,8v.11C9,9.27,9,10.47,8.91,11.72c-.15,3.11-.2,8.54-.15,12.26l-.1,0H5.84a2,2,0,0,1-2-1.87,77.13,77.13,0,0,1,.06-9.76c.09-1,.21-1.88.37-2.73A2,2,0,0,1,6.24,8H9.09Z" fill="#24a9bf"/><path d="M9.13,8v.11C9,9.27,9,10.47,8.91,11.72c0,.09,0,.18,0,.28H6.11a2,2,0,0,0-2,1.64c-.16.85-.28,1.77-.37,2.73,0,.22,0,2.44,0,2.66,0-1.62,0-5.19.18-6.66.09-1,.21-1.88.37-2.73A2,2,0,0,1,6.24,8H9.09Z" fill="#37fedb"/><path d="M21.16,21H15.8c-1.8,0-3.39-3.17-3.89-4.89A34.61,34.61,0,0,1,10.86,2.77,1,1,0,0,1,11.79,2c1.67-.66,4.31-.64,7.13-.48a6.29,6.29,0,0,1,6.69,6.62l-.4,7.08C25.09,17.32,23.32,21,21.16,21Z" fill="#37fedb"/><path d="M28.48,10.9a3.76,3.76,0,0,1-.8,2,3.62,3.62,0,0,1-2.58,1.35l-6.2.44h-.26A3.65,3.65,0,0,1,15,11.09V9a2,2,0,0,1,2-2h7.84a3.67,3.67,0,0,1,3.61,3.12A4.07,4.07,0,0,1,28.48,10.9Z" fill="#4a646d"/><path d="M28.48,10.9a3.42,3.42,0,0,1-1.38.38l-6.2.44h-.26A3.65,3.65,0,0,1,17,8.09V7h7.84a3.67,3.67,0,0,1,3.61,3.12A4.07,4.07,0,0,1,28.48,10.9Z" fill="#93c8da"/><rect x="21.55" y="8.57" width="4.44" height="1.6" rx="0.8" fill="#fff"/><path d="M29.44,10A4.67,4.67,0,0,0,27,6.57,9.08,9.08,0,0,0,18.37,0H13.44A5,5,0,0,0,8.49,4.41C8.38,5.27,8.3,6.15,8.22,7A1.43,1.43,0,0,0,8,7H6.24a3,3,0,0,0-3,2.46A65.54,65.54,0,0,0,2.84,22.2a3,3,0,0,0,3,2.8H7.78c0,1.69.08,3.1.12,4.12A3.09,3.09,0,0,0,11.27,32H13a4,4,0,0,0,4-4V25h2v3a3.08,3.08,0,0,0,3.27,3h1.85a3,3,0,0,0,3-2.81c.22-3.75.33-9.69.33-13.73a4.79,4.79,0,0,0,1-.9A4.7,4.7,0,0,0,29.44,10ZM5.84,23a1,1,0,0,1-1-.94A62.15,62.15,0,0,1,5.25,9.81a1,1,0,0,1,1-.81H8.06c-.29,4.22-.34,10.5-.31,14Zm19.28,5.07a1,1,0,0,1-1,.93H22.27c-.76,0-1.27-.4-1.27-1V25a1,1,0,0,0,0-2H17a2,2,0,0,0-2,2v3a2,2,0,0,1-2,2H11.27c-.82,0-1.35-.37-1.37-1-.16-3.95-.43-16,.57-24.39a3,3,0,0,1,3-2.65h4.93a7,7,0,0,1,6.3,4H17a3,3,0,0,0-3,3v2.09a4.64,4.64,0,0,0,4.64,4.64H19l6.2-.44.27,0C25.43,19,25.33,24.6,25.12,28.07ZM26.9,12.31a2.63,2.63,0,0,1-1.87,1l-6.2.44a2.57,2.57,0,0,1-2-.7A2.61,2.61,0,0,1,16,11.09V9a1,1,0,0,1,1-1h7.84a2.65,2.65,0,0,1,2.06,4.31Z"/></g></svg>
+const LockIcon =()=><svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><title>icon 114 lock</title><desc>Created with Sketch.</desc><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="icon-114-lock" fill="#000000"><path d="M16,21.9146472 L16,24.5089948 C16,24.7801695 16.2319336,25 16.5,25 C16.7761424,25 17,24.7721195 17,24.5089948 L17,21.9146472 C17.5825962,21.708729 18,21.1531095 18,20.5 C18,19.6715728 17.3284272,19 16.5,19 C15.6715728,19 15,19.6715728 15,20.5 C15,21.1531095 15.4174038,21.708729 16,21.9146472 L16,21.9146472 L16,21.9146472 Z M15,22.5001831 L15,24.4983244 C15,25.3276769 15.6657972,26 16.5,26 C17.3284271,26 18,25.3288106 18,24.4983244 L18,22.5001831 C18.6072234,22.04408 19,21.317909 19,20.5 C19,19.1192881 17.8807119,18 16.5,18 C15.1192881,18 14,19.1192881 14,20.5 C14,21.317909 14.3927766,22.04408 15,22.5001831 L15,22.5001831 L15,22.5001831 Z M9,14.0000125 L9,10.499235 C9,6.35670485 12.3578644,3 16.5,3 C20.6337072,3 24,6.35752188 24,10.499235 L24,14.0000125 C25.6591471,14.0047488 27,15.3503174 27,17.0094776 L27,26.9905224 C27,28.6633689 25.6529197,30 23.991212,30 L9.00878799,30 C7.34559019,30 6,28.652611 6,26.9905224 L6,17.0094776 C6,15.339581 7.34233349,14.0047152 9,14.0000125 L9,14.0000125 L9,14.0000125 Z M10,14 L10,10.4934269 C10,6.90817171 12.9101491,4 16.5,4 C20.0825462,4 23,6.90720623 23,10.4934269 L23,14 L22,14 L22,10.5090731 C22,7.46649603 19.5313853,5 16.5,5 C13.4624339,5 11,7.46140289 11,10.5090731 L11,14 L10,14 L10,14 Z M12,14 L12,10.5008537 C12,8.0092478 14.0147186,6 16.5,6 C18.9802243,6 21,8.01510082 21,10.5008537 L21,14 L12,14 L12,14 L12,14 Z M8.99742191,15 C7.89427625,15 7,15.8970601 7,17.0058587 L7,26.9941413 C7,28.1019465 7.89092539,29 8.99742191,29 L24.0025781,29 C25.1057238,29 26,28.1029399 26,26.9941413 L26,17.0058587 C26,15.8980535 25.1090746,15 24.0025781,15 L8.99742191,15 L8.99742191,15 Z" id="lock"></path></g></g></svg>
+const VisitIcon = () => <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1"><title>icon 22 eye</title><desc>Created with Sketch.</desc><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="icon-22-eye"  fill="#000000"><path d="M16,9 C7,9 3,16 3,16 C3,16 7,23.000001 16,23 C25,22.999999 29,16 29,16 C29,16 25,9 16,9 L16,9 L16,9 Z M16,10 C8,10 4.19995117,16 4.19995117,16 C4.19995117,16 8,22.0000006 16,22 C24,21.999999 27.8000488,16 27.8000488,16 C27.8000488,16 24,10 16,10 L16,10 L16,10 Z M16,20 C18.2091391,20 20,18.2091391 20,16 C20,13.7908609 18.2091391,12 16,12 C13.7908609,12 12,13.7908609 12,16 C12,18.2091391 13.7908609,20 16,20 L16,20 L16,20 Z M16,19 C17.6568543,19 19,17.6568543 19,16 C19,14.3431457 17.6568543,13 16,13 C14.3431457,13 13,14.3431457 13,16 C13,17.6568543 14.3431457,19 16,19 L16,19 L16,19 Z M16,17 C16.5522848,17 17,16.5522848 17,16 C17,15.4477152 16.5522848,15 16,15 C15.4477152,15 15,15.4477152 15,16 C15,16.5522848 15.4477152,17 16,17 L16,17 L16,17 Z" id="eye"></path></g></g></svg>
+const AngleBottom = () => <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"viewBox="0 0 50 50" ><g id="Layer_1"><path d="M25,1C11.767,1,1,11.767,1,25s10.767,24,24,24s24-10.767,24-24S38.233,1,25,1z M25,47C12.869,47,3,37.131,3,25S12.869,3,25,3s22,9.869,22,22S37.131,47,25,47z"/><polygon points="10.293,30.293 11.707,31.707 25,18.414 38.293,31.707 39.707,30.293 25,15.586 "/></g><g></g></svg>
+
+
 
 export default TestComponent

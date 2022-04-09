@@ -196,3 +196,220 @@
         }
     }
 }
+
+.userPost{
+        margin-top: 200px;
+    h2{
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: #393939;
+    }
+
+    .Posts{
+        display: grid;
+        grid-template-columns: repeat(3,6fr);
+        justify-items: center;
+        grid-row-gap: 40px;
+        width: 80%;
+        margin: auto;
+
+        .Item{
+                box-shadow: 1px 4px 17px 2px #e2e2e2;
+                width: 300px;
+                height: 300px;
+                border-radius: 20px;
+            .ItemImage{
+                img{
+                    width: 300px;
+                    height: 200px;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    border-bottom-left-radius: 40px;
+                    border-bottom-right-radius: 40px;
+                }
+            }
+
+            .ItemInfo{
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .ItemInfoName{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 50%;
+                    padding: 0 10px;
+
+                    p{
+                        color:#3a3a3a;
+                    }
+                }
+                .ItemInfoIcon{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 30%;
+
+                    svg:first-child{
+                        width: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.FAQ{
+    margin-top: 90px;
+
+    h3{
+        font-size: 40px;
+        padding: 0 60px;
+    }
+
+    .faqBox{
+
+        & > div{
+            //background-color: blanchedalmond;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px;
+            margin-bottom: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            border-radius: 15px;
+            height: 63px;
+            box-shadow: 0px 0px 11px 3px #eaeaea;
+
+            .QandAItem{
+                position: relative;
+                width: 90%;
+                .QItem{
+                    padding: 5px 0;
+                    position: relative;
+                    z-index: 999;
+                    background-color: white;
+                }
+
+                .AItem{
+                    color:#3a3a3a;
+                    position:relative;
+                    white-space: pre;
+                    top: -35px;
+                    transition: all .5s ease;
+
+                    &.open{
+                        top: -10px;
+                    }
+                }
+            }
+
+            svg{
+                width: 30px;
+                transform: rotate(180deg);
+                fill: #636363;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.Footer{
+    width: 80%;
+    margin: 90px auto;
+    box-shadow: 5px 5px 5px 10px #e6e6e6;
+    width: 90%;
+    margin: 90px auto;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+    .TopFooter{
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        padding: 10px;
+
+        .LogoSocial{
+           & > p{
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .Logo{
+                & > div{
+                    display: flex;
+                    justify-content: space-around;
+                    width: 40%;
+
+                    svg{
+                        width:25px;
+                    }
+                }
+            }
+        }
+        .About{
+            p{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            & > div{
+                display: flex;
+                flex-direction: column;
+                a{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .Utility{
+            p{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            & > div{
+                display: flex;
+                flex-direction: column;
+                a{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .shop{
+           .shopTitle{
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 0;
+            }
+
+            .shopText{
+                font-size: 11px;
+            }
+
+            .shopForm{
+                display: flex;
+                justify-content: space-around;
+                margin-top: 40px;
+
+                & > input {
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    border: 1px solid black;
+                    width: 120px;
+                }
+
+                & > button{
+                    padding: 10px 25px;
+                    border-radius: 15px;
+                    border: 1px solid;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .LicenceText{
+        margin-top: 30px;
+        font-size: 15px;
+        word-spacing: 15px;
+    }
+}
