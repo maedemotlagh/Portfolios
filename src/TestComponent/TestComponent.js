@@ -1,6 +1,42 @@
 import React from "react";
 import './style.scss'
 
+
+const PostItem =  [
+    {
+        img:'/img/imgpost1.png',
+        desc:'White Bear',
+        code:'#54385'
+    },
+    {
+        img:'/img/imgpost2.jpg',
+        desc:'Happy Luco',
+        code:'#54395'
+    },
+    {
+        img:'/img/imgpost3.png',
+        desc:'Dodo',
+        code:'#54376'
+    },
+    {
+        img:'/img/imgpost4.png',
+        desc:'Nono Nono',
+        code:'#54348'
+    },
+    {
+        img:'/img/imgpost5.png',
+        desc:'Zombie',
+        code:'#54337'
+    },
+    {
+        img:'/img/imgpost6.jpg',
+        desc:'Pink Devil',
+        code:'#54392',
+    }
+
+]
+
+/////please run in googlechorom or firefox
 const TestComponent = () => {
     return(
         <div>
@@ -43,10 +79,51 @@ const TestComponent = () => {
                         </div>    
                         <Avatar/>
                     </div>
-                    <div className="Info"></div>
+                    <div className="Info">
+                        <h2>pellentesque blandit in quam rhoncus</h2>
+                        <p>
+                        Suspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna at
+                        </p>
+                    </div>
                 </div>
                 <div></div>
 
+            </div>
+            <div className="descUser">
+                <div className="Descs">
+                    <div className="DescsItem">
+                        <span style={{backgroundColor:'#fdc228'}}>01</span>
+                        <p className="title">Motion Graphic</p>
+                        <p className="desc"> Suspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna at</p>
+                    </div>
+                    <div className="DescsItem">
+                        <span style={{backgroundColor:'#77b8a0'}}>02</span>
+                        <p className="title">Motion Graphic</p>
+                        <p className="desc"> Suspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna at</p>
+                    </div>
+                    <div className="DescsItem">
+                        <span style={{backgroundColor:'#f5aeea'}}>03</span>
+                        <p className="title">Motion Graphic</p>
+                        <p className="desc"> Suspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna atSuspendisse sem neque, auctor a elementum ut, varius vel leo.Donec diam arcu,porta et magna at</p>
+                    </div>
+                </div>
+                <div className="userImage">
+                    <img src="/img/Avatar.jpg"/>
+                </div>
+            </div>
+            <div className="userPost">
+                <h2>TopPst</h2>
+                <div className="Posts">
+                {
+                  PostItem.map((content , index)=>
+                  <div className="Item">
+                      <div>
+                          <img src={content.img} />
+                      </div>
+                  </div>
+                  )
+                }
+                </div>
             </div>
         </div>
     )
