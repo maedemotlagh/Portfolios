@@ -22,6 +22,11 @@
 
             a{
                 cursor: pointer;
+                transition: all .4s ease;
+
+                &:hover{
+                    color: #5c5c5c;
+                }
             }
         }
     }
@@ -41,6 +46,11 @@
             padding: 8px 10px;
             border-radius: 16px;
             cursor: pointer;
+            transition: all .5s ease-in-out;
+
+            &:hover{
+                opacity: .8;
+            }
         }
 
         .navbarSocial{
@@ -54,6 +64,11 @@
                 svg{
                     width: 20px;
                     height: fit-content;
+                    transition: all .4s ease;
+
+                    &:hover{
+                        transform: rotate(360deg);
+                    }
                 }
             }
         }
@@ -131,13 +146,30 @@
                     padding: 7px 16px;
                     border-radius: 10px;
                     border: 1px solid black;
+                    transition: all .4s ease;
+
+                    &:hover{
+                        background-color: #4a646d;
+                    }
                     
                 }
             }
+            .AvatarIcon{
+                svg{
+                    width: 200px;  
+                }
 
-            svg{
-                width: 200px;
-                
+                &.pink{
+                    svg{
+                        fill: palevioletred;
+                    }
+                }
+
+                &.red{
+                    svg{
+                        fill: red;
+                    }
+                }
             }
         }
         .Info{
@@ -199,6 +231,7 @@
 
 .userPost{
         margin-top: 200px;
+        position: relative;
     h2{
         text-align: center;
         font-size: 30px;
@@ -254,6 +287,205 @@
 
                     svg:first-child{
                         width: 26px;
+                        transition: all .4s ease;
+                        cursor: not-allowed;;
+
+                        &:hover{
+                            path{
+                                fill:#692164 ;
+                            }
+                        }
+                    }
+
+                    /*svg{
+                        cursor: pointer;
+                        transition: all .4s ease ;
+
+                        &:hover{
+                            path{
+                               fill: #0061a0;
+                            }   
+                        }
+                    }*/
+                    .VisitProduct{
+
+                      .VisitIcon{
+                          display: flex;
+                          svg{
+                              cursor: pointer;
+                              transition: all .4s ease;
+                            &:hover{
+                              path{
+                                  fill: #0061a0;
+                              }
+                            }
+                          }
+                      }  
+                      .VisitBox{
+                        display: none;
+                        visibility: hidden;
+                        max-height: 0;
+                        transition: all .5s ease;
+                        opacity: 0;
+
+                        .closeIcon{
+                            position: absolute;
+                            top: 35px;
+                            left: 55px;
+                            background-color:#a6a6a6 ;
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            border-radius: 50%;
+                            cursor: pointer !important;
+
+                            svg{
+                                fill: white;
+                                cursor: pointer !important;
+
+                            }
+                        }
+
+                        .product{
+                            background-color: white;
+                            position: absolute;
+                            width: 60%;
+                            height: 600px;
+                            left: 285px;
+                            top: 54px;
+                            border: 1px solid #b104e4;
+                            padding: 10px;
+                            //display: flex;
+                            .productItem{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 55%;
+                                height: fit-content;
+                                margin-bottom: 70px;
+                                margin-top: 40px;
+                                padding: 0 20px;
+                                
+
+                                .productInfo{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    width: 35%;
+
+                                    .priceproduct{
+                                        
+                                        .title{
+                                            font-size: 30px;
+                                            font-weight: bold;
+                                        }
+                                        .prise{
+                                            margin-left: 12px;
+                                        }
+                                    }
+                                    .nameproduct{
+                                        //color: royalblue;
+                                        .title{
+                                            font-size: 30px;
+                                            font-weight: bold;
+                                        }
+                                        .name{
+                                            margin-left: 15px;
+                                        }
+                                    }
+                                }
+
+                                .imgproduct{
+                                    img{
+                                        width: 200px;
+                                        box-shadow: 0px 0px 5px 6px #e2e2e2;
+                                    }
+                                }
+                            }
+
+                            .AddProduct{
+                                display: flex;
+                                align-items: baseline;
+                                justify-content: space-between;
+                                padding: 10px 20px;
+
+                                .BuyIcon{
+                                    svg{
+                                        width: 50px;
+                                    }
+
+                                    & > div{
+                                        position: absolute;
+                                        width: 20px;
+                                        height: 20px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 50%;
+                                        background-color: #cbc0d6;
+                                    }
+                                }
+
+                                .AddProductItem{
+                                    .title{
+                                        font-size: 45px;
+                                        font-weight: bold;
+                                    }
+                                    .counter{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-around;
+                                        width: 70%;
+
+                                        .increas{
+                                            width: 100px;
+                                            height: 40px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            cursor: pointer;
+                                            background-color: #7e7e7e;
+                                            color: white;
+
+                                            &:hover{
+                                                opacity: .8;
+                                            }
+                                        }
+                                        .decreas{
+                                            width: 100px;
+                                            height: 40px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            cursor: pointer;
+                                            color: white;
+                                            background-color: #7e7e7e;
+
+                                            &:hover{
+                                                opacity: .8;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                        
+
+                        &.active{
+                            display: block;
+                            visibility: visible;
+                            max-height: 1000px;
+                            background: #0000008c;
+                            position: absolute;
+                            opacity: 1;
+                            width: 100%;
+                            left: 0;
+                            top: 0px;
+                            height: 780px;
+                        }
+                      }
                     }
                 }
             }
@@ -293,6 +525,10 @@
                     position: relative;
                     z-index: 999;
                     background-color: white;
+                    &.openQ{
+                        color: #694d9f;
+                        cursor: pointer;
+                    }
                 }
 
                 .AItem{
@@ -344,6 +580,12 @@
 
                     svg{
                         width:25px;
+                        transition: all .4s ease;
+                        cursor: pointer;
+
+                        &:hover{
+                            transform: rotate(360deg);
+                        }
                     }
                 }
             }
@@ -354,10 +596,17 @@
                 font-weight: bold;
             }
             & > div{
+
                 display: flex;
                 flex-direction: column;
+
                 a{
                     margin-bottom: 10px;
+                    cursor: pointer;
+
+                    &:hover{
+                        opacity: .9;
+                    }
                 }
             }
         }
@@ -371,6 +620,11 @@
                 flex-direction: column;
                 a{
                     margin-bottom: 10px;
+                    cursor: pointer;
+
+                    &:hover{
+                        opacity: .9;
+                    }
                 }
             }
         }
@@ -402,6 +656,11 @@
                     border-radius: 15px;
                     border: 1px solid;
                     cursor: pointer;
+                    transition: all .4s ease;
+
+                    &:hover{
+                        background-color: #ced4ff;
+                    }
                 }
             }
         }
