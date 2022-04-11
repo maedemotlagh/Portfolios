@@ -1,3 +1,4 @@
+import { MenuItem } from "@material-ui/core";
 import React, { useState } from "react";
 import './style.scss'
 
@@ -117,12 +118,15 @@ const TestComponent = () => {
         <div>
             <div className="navbar">
                 <div className="leftsection">
-                <div className="navbarLogo">logo</div>
-                <div className="navbarMenu">
-                    <a>about us</a>
-                    <a>contact us</a>
-                    <a>colors</a>
+                    <div className="navbarLogo">logo</div>
+                    <div className="navbarMenu">
+                        <a>about us</a>
+                        <a>contact us</a>
+                        <a>colors</a>
+                    </div>
                 </div>
+                <div className="MenuMobile">
+                    <MenuMobile/>
                 </div>
                 <div className="rightsection">
                 <div className="navbarSocial">
@@ -338,6 +342,6 @@ const VisitIcon = () => <svg width="32px" height="32px" viewBox="0 0 32 32" vers
 const AngleBottom = () => <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"viewBox="0 0 50 50" ><g id="Layer_1"><path d="M25,1C11.767,1,1,11.767,1,25s10.767,24,24,24s24-10.767,24-24S38.233,1,25,1z M25,47C12.869,47,3,37.131,3,25S12.869,3,25,3s22,9.869,22,22S37.131,47,25,47z"/><polygon points="10.293,30.293 11.707,31.707 25,18.414 38.293,31.707 39.707,30.293 25,15.586 "/></g><g></g></svg>
 const CloseIcon = () => <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 60.963 60.842" ><path  d="M59.595,52.861L37.094,30.359L59.473,7.98c1.825-1.826,1.825-4.786,0-6.611c-1.826-1.825-4.785-1.825-6.611,0L30.483,23.748L8.105,1.369c-1.826-1.825-4.785-1.825-6.611,0c-1.826,1.826-1.826,4.786,0,6.611l22.378,22.379L1.369,52.861c-1.826,1.826-1.826,4.785,0,6.611c0.913,0.913,2.109,1.369,3.306,1.369s2.393-0.456,3.306-1.369l22.502-22.502l22.501,22.502c0.913,0.913,2.109,1.369,3.306,1.369s2.393-0.456,3.306-1.369C61.42,57.647,61.42,54.687,59.595,52.861z"/></svg>
 const BuyIcon  = () => <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"viewBox="0 0 208.955 208.955"><path d="M190.85,200.227L178.135,58.626c-0.347-3.867-3.588-6.829-7.47-6.829h-26.221V39.971c0-22.04-17.93-39.971-39.969-39.971C82.437,0,64.509,17.931,64.509,39.971v11.826H38.27c-3.882,0-7.123,2.962-7.47,6.829L18.035,200.784c-0.188,2.098,0.514,4.177,1.935,5.731s3.43,2.439,5.535,2.439h157.926c0.006,0,0.014,0,0.02,0c4.143,0,7.5-3.358,7.5-7.5C190.95,201.037,190.916,200.626,190.85,200.227z M79.509,39.971c0-13.769,11.2-24.971,24.967-24.971c13.768,0,24.969,11.202,24.969,24.971v11.826H79.509V39.971z M33.709,193.955L45.127,66.797h19.382v13.412c0,4.142,3.357,7.5,7.5,7.5c4.143,0,7.5-3.358,7.5-7.5V66.797h49.936v13.412c0,4.142,3.357,7.5,7.5,7.5c4.143,0,7.5-3.358,7.5-7.5V66.797h19.364l11.418,127.158H33.709z"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-
+const MenuMobile = () => <svg width="18px" height="12px" viewBox="0 0 18 12" version="1.1"><g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Rounded" transform="translate(-885.000000, -3438.000000)"><g id="Navigation" transform="translate(100.000000, 3378.000000)"><g id="-Round-/-Navigation-/-menu" transform="translate(782.000000, 54.000000)"><g transform="translate(0.000000, 0.000000)"><polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon><path d="M4,18 L20,18 C20.55,18 21,17.55 21,17 C21,16.45 20.55,16 20,16 L4,16 C3.45,16 3,16.45 3,17 C3,17.55 3.45,18 4,18 Z M4,13 L20,13 C20.55,13 21,12.55 21,12 C21,11.45 20.55,11 20,11 L4,11 C3.45,11 3,11.45 3,12 C3,12.55 3.45,13 4,13 Z M3,7 C3,7.55 3.45,8 4,8 L20,8 C20.55,8 21,7.55 21,7 C21,6.45 20.55,6 20,6 L4,6 C3.45,6 3,6.45 3,7 Z" id="🔹-Icon-Color" fill="#1D1D1D"></path></g></g></g></g></g></svg>
 
 export default TestComponent

@@ -1,6 +1,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
     margin: auto;
     ///background-color: blanchedalmond;
@@ -15,12 +16,40 @@
         justify-content: space-between;
         align-items: center;
 
+        @media (max-width:1193px) {
+            width: 30%;
+        }
+
+        @media (max-width:992px) {
+            .navbarLogo{
+                display: none;
+            }
+        }
+
+        @media (max-width:725px) {
+            width: 35%;
+        }
+
+        @media (max-width:571px) {
+            width: 40%;
+        }
+        @media (max-width:530px) {
+            display: none;
+        }
+
         .navbarMenu{
             width: 200px;
             display: flex;
             justify-content: space-between;
 
             a{
+                white-space: pre;
+                @media (max-width:671px) {
+                    width: 35px;
+                    margin-left:-13px    
+                }
+
+
                 cursor: pointer;
                 transition: all .4s ease;
 
@@ -31,12 +60,34 @@
         }
     }
 
+    .MenuMobile{
+        display: none;
+        @media (max-width:530px) {
+            display: block;
+        }
+        svg{
+            fill: #454545;
+            width: 50px;
+        }
+    }
+
     .rightsection{
         display: flex;
         width: 20%;
         margin-right: 20px;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width:992px) {
+            width: 30%;
+        }
+        @media (max-width:571px) {
+            width: 40%;
+        }
+        @media (max-width:435px) {
+            justify-content: end;
+        }
+        
 
         .navbarLogin{
             background-color: #6f6f6f;
@@ -59,6 +110,10 @@
             align-items: center;
             width: 150px;
 
+            @media (max-width:435px) {
+                display: none;    
+            }
+
             a{
                 cursor: pointer;
                 svg{
@@ -79,8 +134,19 @@
     direction: ltr;
 
     .textheader{
+        @media (max-width:454px) {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         h1{
             color: #5c5c5c;
+
+            @media (max-width:330px) {
+                width: 90%;
+            }
+
             span{
                 color: #d994ee;;
             }
@@ -88,12 +154,24 @@
         p{
             width: 340px;
             color: #6f6f6f;
+
+            @media (max-width:330px) {
+                width: 270px;
+            }
         }
     }
 
     .imageheader{
         img{
            width: 640px;
+
+           @media (max-width:452px) {
+               width: 480px;
+           }
+
+           @media (max-width:325px) {
+               width: 430px;
+           }
         }   
     }
 }
@@ -125,6 +203,9 @@
         margin-top: 60px;
         box-shadow: 0px 5px 7px 7px #e1e1e1;
 
+        @media (max-width:681px) {
+            flex-direction: column-reverse;
+        }
     
 
         .user{
@@ -132,6 +213,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @media (max-width:639px) {
+                width: 45%;
+            }
+
+            @media (max-width:570px) {
+                width: 50%;
+            }
 
             .userColor{
                 display: flex;
@@ -176,6 +265,10 @@
             width: 45%;
             text-align: left;
 
+            @media (max-width:681px) {
+                width:60%
+            }
+
             h2{
                 text-align: left;
             }
@@ -191,11 +284,36 @@
     width: 80%;
     margin: 50px auto;
 
+    @media (max-width:1075px) {
+        width: 90%;
+    }
+
+    @media (max-width:920px) {
+        flex-direction: column-reverse;
+    }
+    @media (max-width:500px) {
+        width: 100%;
+    }
+
     .Descs{
         width: 515px;
         box-shadow: 0px 1px 19px 9px #e3e3e3;
         border-radius: 16px;
         padding: 20px 10px;
+
+        @media (max-width:1215px) {
+            width: 455px;
+        }
+        @media (max-width:1143px) {
+            width: 48%;
+        }
+        @media (max-width:1075px) {
+            width: 45%;
+        }
+        @media (max-width:920px) {
+            margin-top: 30px;
+            width: 70%;
+        }
 
         .DescsItem{
             margin-bottom: 20px;
@@ -225,6 +343,21 @@
             height: 400px;
             box-shadow: 0 5px 10px 9px #e6e6e6;
             border-radius: 16px;
+
+            @media (max-width:1075px) {
+                width: 90%;
+            }
+
+            @media (max-width:900px) {
+                margin-left: 20px;
+            }
+            @media (max-width:600px) {
+                width: 200px;
+                height: 200px;
+            }
+            @media (max-width:500px) {
+                margin-left: 0;
+            }
         }
     }
 }
@@ -247,11 +380,30 @@
         width: 80%;
         margin: auto;
 
+        @media (max-width:1175px) {
+            width: 90%;
+        }
+        @media (max-width:1040px) {
+            width: 100%;
+        }
+        @media (max-width:940px) {
+            grid-template-columns: repeat(2 ,3fr);
+        }
+        @media (max-width:500px) {
+            grid-template-columns: repeat(1 , 6fr);
+        }
+
         .Item{
                 box-shadow: 1px 4px 17px 2px #e2e2e2;
                 width: 300px;
                 height: 300px;
                 border-radius: 20px;
+
+                @media (max-width:635px) {
+                    width: 230px;
+                    height: 300px;    
+                }
+
             .ItemImage{
                 img{
                     width: 300px;
@@ -260,6 +412,11 @@
                     border-top-right-radius: 20px;
                     border-bottom-left-radius: 40px;
                     border-bottom-right-radius: 40px;
+
+                    @media (max-width:635px) {
+                        width: 230px;
+                        height: 170px;
+                    }
                 }
             }
 
@@ -525,6 +682,12 @@
                     position: relative;
                     z-index: 999;
                     background-color: white;
+                    overflow:scroll;
+                    white-space: pre;
+                    @media (max-width:475px) {
+                        width: 90%;
+                    }
+
                     &.openQ{
                         color: #694d9f;
                         cursor: pointer;
@@ -537,6 +700,12 @@
                     white-space: pre;
                     top: -35px;
                     transition: all .5s ease;
+                    overflow: scroll;
+                    white-space: pre;
+
+                    @media (max-width:475px) {
+                        width: 90%;
+                    }
 
                     &.open{
                         top: -10px;
@@ -566,6 +735,18 @@
         display: grid;
         grid-template-columns: repeat(4 , 1fr);
         padding: 10px;
+        align-items: baseline;
+
+        @media (max-width:840px) {
+            justify-items: center;
+        }
+
+        @media (max-width:600px) {
+            grid-template-columns: repeat(3 ,1fr);
+        }
+        @media (max-width:460px) {
+            grid-template-columns: repeat(1 ,1fr);
+        }
 
         .LogoSocial{
            & > p{
@@ -629,6 +810,9 @@
             }
         }
         .shop{
+            @media (max-width:460px) {
+                text-align: center;
+            }
            .shopTitle{
             font-size: 25px;
             font-weight: bold;
@@ -644,11 +828,19 @@
                 justify-content: space-around;
                 margin-top: 40px;
 
+                @media (max-width:840px) {
+                    width: 235px;
+                }
+
                 & > input {
                     padding: 15px 20px;
                     border-radius: 10px;
                     border: 1px solid black;
                     width: 120px;
+
+                    @media (max-width:840px) {
+                        padding: 15px 15px;
+                    }
                 }
 
                 & > button{
@@ -657,6 +849,10 @@
                     border: 1px solid;
                     cursor: pointer;
                     transition: all .4s ease;
+
+                    @media (max-width:840px) {
+                        padding: 10px 15px;
+                    }
 
                     &:hover{
                         background-color: #ced4ff;
