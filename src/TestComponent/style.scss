@@ -682,10 +682,11 @@
                     position: relative;
                     z-index: 999;
                     background-color: white;
-                    overflow:scroll;
+                    ////overflow:scroll;
                     white-space: pre;
                     @media (max-width:475px) {
                         width: 90%;
+                        overflow:scroll;
                     }
 
                     &.openQ{
@@ -700,11 +701,13 @@
                     white-space: pre;
                     top: -35px;
                     transition: all .5s ease;
-                    overflow: scroll;
+                    /////overflow: scroll;
                     white-space: pre;
 
                     @media (max-width:475px) {
                         width: 90%;
+                        overflow: scroll;
+
                     }
 
                     &.open{
