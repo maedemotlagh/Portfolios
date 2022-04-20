@@ -1,4 +1,5 @@
 import React from 'react'
+import Dashboard from './AdminPanel/dashbord/dashbord'
 import Login from './AdminPanel/Login/Login'
 import Test from './component/Test'
 import TestComponent from './TestComponent/TestComponent'
@@ -8,7 +9,8 @@ const App =()=>{
     <div>
      {/*<Test/>*/}
      {/*<TestComponent/>*/}
-     <Login/>
+     {/*<Login/>*/}
+     <Dashboard/>
   </div>
   )}
 export default App;

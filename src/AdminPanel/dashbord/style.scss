@@ -1,0 +1,191 @@
+.dashboardRoot{
+    direction: rtl;
+    .dashboardNavbar{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0 !important;
+        width: 75%;
+        padding: 10px 20px;
+        margin: auto;
+        align-items: center;
+        transition: all .5s ease-out;
+
+        &.openMenu{
+            width: 95%;
+        }
+
+
+        .profileSection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 200px;
+
+            svg{
+                width: 20px;
+                cursor: pointer;
+                path{
+                fill: rgb(95, 95, 95);
+                }
+
+                &:hover{
+                    opacity: .7;
+                }
+            }
+        }
+        .searchSection{
+            svg{
+                width: 20px;
+                fill: rgb(95, 95, 95);
+
+            }
+        }
+        .profileDropdown{
+            position: absolute;
+            top: 60px;
+            right: 65px;
+            background: #f3f3f3;
+            transition: all .2s ease-out;
+            opacity: 0;
+            max-height: 0;
+            visibility: hidden;
+            direction: ltr;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+
+
+            hr{
+                width: 100%;
+            }
+
+            &.openProfile{
+                opacity: 1;
+                visibility: visible;
+                max-height: 1000px;
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+
+            .profileName{
+                display: flex;
+                justify-content: space-between;
+                width: 145px;
+                align-items: center;
+
+                & > svg{
+                    width: 40px;
+                }
+
+                .profilePosition{
+                    & > P{
+                        margin-bottom: 0;
+                    }
+                    & > span{
+                        font-size: 11px;
+                        color: #858585;
+                    }
+                }
+            }
+            .profileOption{
+                & > div {
+                    margin-bottom: 10px;
+                    cursor: pointer;
+
+                    &:hover{
+                        opacity: .8;
+                    }
+                }
+            }
+            .profileSetting{
+                & > div{
+                    margin-bottom: 10px;
+                    cursor: pointer;
+
+                    &:hover{
+                        opacity: .8;
+                    }
+                }
+            }
+            .profileLogout{
+                cursor: pointer;
+
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        
+        }
+        .alarmDropdown{
+            background: antiquewhite;
+            width: 200px;
+            height: 270px;
+            position: absolute;
+            top: 55px;
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+        }
+    }
+    .menuSideBar{
+        //background: aquamarine;
+        width: 300px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        transform: translate(0px, 0px);
+        transition: all .5s ease-out;
+
+        &.openMenu{
+        transform: translate(-255px, 0px);
+        box-shadow: 2px 1px 21px -5px gainsboro; 
+        }
+
+        .topSection{
+            display: flex;
+            width: 95%;
+            justify-content: space-between;
+            direction: ltr;
+            align-items: center;
+            padding: 0 10px;
+
+            & > span{
+                width: 15px !important;
+                height: 15px !important;
+                border: 4px solid black;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: all .5s ease;
+
+                &:hover{
+                   transform: scale(.9);
+                }
+            }
+        }
+        .itemList{
+            padding: 0 30px;
+            margin-top: 50px;
+            direction: ltr;
+
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 35px;
+                cursor: pointer;
+                font-size: 20px;
+                font-weight: bold;
+                color: gray;
+                transition: all .5s ease-out;
+
+                &:hover{
+                    color: darkblue;
+                }
+            }
+        }
+    }
+}
